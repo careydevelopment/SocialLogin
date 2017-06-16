@@ -1,4 +1,4 @@
-package com.careydevelopment.springsecurityfacebook.config;
+package com.careydevelopment.springsecuritysocial.config;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.careydevelopment.springsecurityfacebook.config;
+package com.careydevelopment.springsecuritysocial.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

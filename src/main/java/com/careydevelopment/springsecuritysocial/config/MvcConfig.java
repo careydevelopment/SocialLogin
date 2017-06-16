@@ -1,4 +1,4 @@
-package com.careydevelopment.springsecurityfacebook.config;
+package com.careydevelopment.springsecuritysocial.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

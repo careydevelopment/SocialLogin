@@ -1,4 +1,4 @@
-package com.careydevelopment.springsecurityfacebook.config;
+package com.careydevelopment.springsecuritysocial.config;
 
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionSignUp;
