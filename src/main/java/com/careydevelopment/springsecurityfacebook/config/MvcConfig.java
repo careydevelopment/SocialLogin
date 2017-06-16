@@ -1,4 +1,4 @@
-package com.careydevelopment.springsecuritysimple.config;
+package com.careydevelopment.springsecurityfacebook.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -9,10 +9,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/simpleloginhome").setViewName("simpleloginhome");
-        registry.addViewController("/").setViewName("simpleloginhome");
-        registry.addViewController("/simpleloginsuccess").setViewName("simpleloginsuccess");
-        registry.addViewController("/simplelogin").setViewName("simplelogin");
+        registry.addViewController("/socialloginhome").setViewName("socialloginhome");
+        registry.addViewController("/").setViewName("socialloginhome");
+        registry.addViewController("/socialloginsuccess").setViewName("socialloginsuccess");
+        registry.addViewController("/sociallogin").setViewName("sociallogin");
     }
 
 }

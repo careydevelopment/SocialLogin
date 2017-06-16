@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Spring Security Example </title>
+        <object th:include="fragments/head :: head" th:remove="tag"></object>
+    </head>
+    <body>
+        <div th:include="fragments/topmenuheader :: header"></div>
+        <div class="page-container">
+            <div class="page-content-wrapper">
+                <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="portlet box blue ">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            <i class="icon-key"></i>
+                                            <span class="caption-subject" style="position:relative;top:2px">Sign in</span>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body form">
+                                        <div>
+                                            <div class="mt-element-ribbon bg-grey-steel">
+                                                <div class="ribbon ribbon-color-success uppercase">Pick One</div>
+                                                <p class="ribbon-content">Login with either Facebook or Twitter.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div style="padding-bottom:10px;padding-left:15px">
+                                                <form action="/signin/facebook" id="facebookSignin" method="POST" style="margin-top:30px">
+                                                    <a href="javascript:$('#facebookSignin').submit();" class="btn btn-primary"><i class="fa fa-facebook"></i> Login with Facebook </a>
+                                                </form>
+                                                <form action="/signin/twitter" id="twitterSignin" method="POST" style="margin-top:30px;margin-bottom:20px">
+                                                    <a href="javascript:$('#twitterSignin').submit();" class="btn btn-primary"><i class="fa fa-twitter"></i> Login with Twitter </a>
+                                                </form>
+                                            </div>
+                                        </div>                      
+                                    </div>      
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:include="fragments/homefooter :: footer"></div>       
+    </body>
+</html>

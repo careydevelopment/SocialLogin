@@ -1,4 +1,4 @@
-package com.careydevelopment.springsecuritysimple;
+package com.careydevelopment.springsecurityfacebook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
