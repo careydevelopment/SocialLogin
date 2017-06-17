@@ -3,7 +3,6 @@ package com.careydevelopment.springsecuritysocial.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -11,6 +10,9 @@ import org.springframework.social.connect.ConnectionFactoryLocator;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.mem.InMemoryUsersConnectionRepository;
 import org.springframework.social.connect.web.ProviderSignInController;
+
+import com.careydevelopment.springsecuritysocial.security.SocialConnectionSignup;
+import com.careydevelopment.springsecuritysocial.security.SocialSignInAdapter;
 
 @Configuration
 @EnableWebSecurity
@@ -31,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .csrf().disable()
             .authorizeRequests()
-                .antMatchers("/", "/socialloginhome", "/assets/**", "/images/**","/login*","/signin/**","/signup/**").permitAll()
+                .antMatchers("/", "/socialloginhome", "/assets/**", "/images/**","/login*","/signin/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -42,15 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll();
     }
 
-    
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
-    }
-    
-    
+
     @Bean
     public ProviderSignInController providerSignInController() {
         ((InMemoryUsersConnectionRepository) usersConnectionRepository)

@@ -12,12 +12,12 @@
                 <div class="page-head" style="background-color:#eff3f8;padding-top:40px">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 ">
+                            <div class="col-md-12 col-lg-12 ">
                                 <div class="portlet-body form">
                                     <form th:action="@{/logout}" method="post">
-                                        <div class="form-body">
-                                            <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-                                            <input type="submit" class="btn blue" value="Sign Out"/>
+                                        <div class="form-body" style="margin-bottom:200px">
+                                            <h2 th:inline="text">Congrats! You're logged in as [[${#httpServletRequest.remoteUser}]]!</h2>
+                                            <input style="margin-top:30px" type="submit" class="btn blue" value="Logout"/>
                                         </div>
                                     </form>
                                 </div>
